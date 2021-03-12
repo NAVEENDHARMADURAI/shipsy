@@ -1,0 +1,353 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family:sans-serif;
+    height:800px;
+}
+.container-1{
+    position:relative;
+    height:100vh;
+    width:100%;
+    background-image: url("images/img1.jpg");
+    filter:brightness(70%);
+}
+.container::before{
+    content:'';
+    background-size: cover;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+.navbar h1{
+    position:relative;
+    font-size: 90px;
+    text-align: center;
+    margin-top:20%;
+    color:white;
+}
+nav img{
+    width:150px;
+    position:absolute;
+    top:17px;
+    left:12%;
+}
+nav{
+    height:80px;
+}
+
+nav ul{
+    float:right;
+    margin-right: 25px;
+}
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin:0 15px;
+    text-decoration: none;
+}
+nav ul li a{
+    position:relative;
+    color:black;
+    font-size:18px;
+    padding:5px 0;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+nav ul li a:before{
+    position:absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height:3px;
+    width:100%;
+    background:white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform:scaleX(1);
+    transform-origin:left;
+}
+label #btn,
+label #cancel{
+    color:white;
+    font-size:30px;
+    float: right;
+    line-height:40px;
+    cursor:pointer;
+    display:none;
+}
+#check{
+    display:none;
+}
+@media (max-width:1118px){
+    label #btn{
+        display:block;
+    }
+
+    ul{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background:white;
+        top:80px;
+        left:-100%;
+        text-align:center;
+    }
+
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height:30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        text-decoration: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    #check:checked ~ label #btn{
+        display:none;
+    }
+
+    #check:checked ~ label #cancel{
+        display:block;
+    }
+
+
+
+    nav img{
+        left:6%;
+        top:20px;
+        width:130px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+
+h1{
+    margin-top:200px;
+    margin-left:300px;
+    font-size:90px;
+    color:white;
+    font-weight: 400;
+}
+.btn{
+    margin-top:70px;
+    margin-left:40%;
+}
+.button{
+    background-color: rgb(65, 65, 230);
+    color:white;
+    border:none;
+    padding:15px 22px;
+    text-align:center;
+    display:inline-block;
+    font-size: 20px;
+    border-radius:8px;
+    transition-duration: 0.5s;
+}
+.btn .button:hover{
+    background-color: rgb(14, 146, 190);
+}
+
+.col-3{
+    display:flex;
+    text-align: center;
+    margin-top:0px;
+    margin-bottom: 80px;
+    padding-top:50px;
+    padding-bottom: 50px;
+    background-color: yellow;
+    align-items: center;
+    justify-content: center;
+}
+.col-3 h2{
+    text-align: center;
+    font-size: 50px;
+}
+
+button{
+    margin-left: 50px;
+    border:2px solid black;
+    padding:20px 40px;
+    text-align:center;
+    display:inline-block;
+    font-size: 20px;
+    border-radius:40px 40px;
+    transition-duration: 0.5s;
+    color:yellow;
+    text-align: center;
+}
+button:hover{
+    background-color: rgb(18, 21, 22);
+    color:yellow;
+}
+
+
+.col-4{
+    padding:20px;
+    box-sizing: border-box;
+    display:flex;
+}
+.col-4 .col-img{
+    width:300px;
+    flex:0 0 500px;
+}
+.col-4 .col-img img{
+    max-width: 100%;
+}
+.col-4 .col-content{
+    padding-left: 20px;
+}
+.col-4 .col-content h2{
+    font-size: 40px;
+    font-weight: bolder;
+    color:rgb(33, 91, 199)
+}
+.col-4 .col-content P{
+    font-size: 30px;
+    font-weight:100;
+}
+.col-4 .col-button{
+    margin-top: 50px;
+    margin-left:10rem;
+    background-color: cornflowerblue;
+    color:white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+.col-5{
+    padding:50px;
+    display:flex;
+    padding-left: 100px;
+    background-color:rgb(7, 187, 241) ;
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    justify-content: center;
+}
+
+.col-5 .col-5-button{
+    padding-left: 40px;
+    background-color: rgb(7, 187, 241);
+    color:white;
+    border-radius: 1px;
+}
+
+.col-6 h2{
+    display:flex;
+    font-size: 90px;
+    font-weight:50;
+    color:rgb(22, 67, 150);
+    justify-content: center;
+}
+.col-6 .col-6-img{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  
+  /* Slides */
+  .mySlides {
+    padding: 80px;
+    text-align: center;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: rgb(92, 88, 88);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    position:absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    color: rgb(70, 78, 228);
+  }
+  
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: rgb(255, 251, 251);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 5px 2px;
+    background-color: rgb(74, 117, 197);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  q {font-style: italic;}
+  
+
+  .author {color: cornflowerblue;}
+
+
+  .home-newsletter {
+    justify-content: space-around;
+    background-image: url("images/img7.png");
+    background-repeat: no-repeat;
+    background-size:auto;
+    padding: 120px 0;
+}
+
+.home-newsletter .single {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.home-newsletter .single h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(19, 17, 17);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.home-newsletter .single .form-control {
+    height: 50px;
+    background: rgb(255, 251, 251);
+    border-color: transparent;
+    border-radius: 20px 0 0 20px;
+}
